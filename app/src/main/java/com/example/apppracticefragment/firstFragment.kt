@@ -17,10 +17,12 @@ class firstFragment : Fragment(R.layout.fragment_first) {
 
         btnFirstFragment.setOnClickListener {
             requireActivity().supportFragmentManager.commit {
-                replace(R.id.fragmentContainer, secondFragment())
+                replace(R.id.fragmentContainer, secondFragment.newInstance("José", 20))
                 addToBackStack("PF")
             }
         }
+
+
     }
 
 }
